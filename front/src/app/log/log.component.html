@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-5qmgExKiV9vZAZx0Tg95RfW58g7NixGv5iJ8MCmtOn6VuW2+p6L7cHgYVtDljtsPp2YmRJ0wSh9z5D8n8Zj+Nw=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="logs-page">
+            <!-- ✅ Bannière -->
+            <div class="banner">
+              <h1><i class="fas fa-history"></i> Tableau des Logs</h1>
+              <p>Suivez l’état des événements de votre système en un coup d’œil.</p>
+            </div>
+
+            <!-- Stats Cards Row -->
+<div class="row g-3 mb-4">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h4 class="text-muted mb-2 fs-5">Succès</h4>
+              <h3 class="mb-0 fs-3">8,549%</h3>
+              <small class="text-success fs-6"></small>
+            </div>
+            <i class="fas fa-thumbs-up text-primary big-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h4 class="text-muted mb-2 fs-5">Erreurs</h4>
+              <h3 class="mb-0 fs-3">24,890%</h3>
+              <small class="text-danger fs-6"></small>
+            </div>
+            <i class="fas fa-exclamation-circle text-danger big-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h4 class="text-muted mb-2 fs-5">Information</h4>
+              <h3 class="mb-0 fs-3">1,236%</h3>
+              <small class="text-warning fs-6"></small>
+            </div>
+            <i class="fas fa-info-circle text-warning big-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h4 class="text-muted mb-2 fs-5">Avertissements</h4>
+              <h3 class="mb-0 fs-3">15.3%</h3>
+              <small class="text-info fs-6"></small>
+            </div>
+            <i class="fas fa-bell text-info big-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+            <!-- ✅ Boutons des logs -->
+            <div class="logs-container">
+              <h2>Catégories des Logs</h2>
+
+              <div class="logs-grid">
+                <div *ngFor="let log of logCategories" class="log-card {{ log.color }}" (click)="navigateToLogs(log.route)">
+                  <div class="icon">{{ log.icon }}</div>
+                  <div class="log-info">
+                    <h3>{{ log.type }}</h3>
+                    <p>Voir les logs de type {{ log.type }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

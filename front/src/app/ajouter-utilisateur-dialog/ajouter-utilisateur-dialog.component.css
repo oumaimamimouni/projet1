@@ -1,0 +1,83 @@
+/* Global styles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* Style pour les champs de formulaire */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 12px; /* Espace plus petit entre les champs */
+  }
+  
+  /* Style pour le bouton de soumission */
+  button[type="submit"] {
+    background-color: #009688; /* Couleur turquoise */
+    color: white;
+    font-weight: 400;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Bouton "Ajouter" : survol */
+  button[type="submit"]:hover {
+    background-color: #00796B;
+    cursor: pointer;
+  }
+  
+  /* Style pour le bouton "Annuler" */
+  button[mat-button] {
+    color: #757575; /* Gris clair pour Annuler */
+    font-weight: 400;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #BDBDBD;
+    margin-top: 12px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Bouton "Annuler" : survol */
+  button[mat-button]:hover {
+    background-color: #F5F5F5;
+    cursor: pointer;
+  }
+  
+  /* Formulaire */
+  form {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Inputs pour un look plus fin */
+  mat-input-element {
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-weight: 300;
+    color: #333;
+    border: 1px solid #E0E0E0;
+  }
+  
+  mat-input-element:focus {
+    border-color: #009688;
+  }
+  
+  /* Style pour la boîte de dialogue */
+  mat-dialog-container {
+    padding: 20px;
+  }
+  

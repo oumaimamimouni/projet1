@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+.custom-file-input:lang(en) ~ .custom-file-label {
+    /* Ajoute ici tes styles */
+  }
+  /* styles.scss */
+body {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+button {
+  background-color: #f4f4f4;
+}
+
+body.dark-mode button {
+  background-color: #333;
+}
+/* styles.scss */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}

@@ -1,0 +1,98 @@
+
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+</head>
+<body>
+
+    <div class="panel-header panel-header-sm">
+    </div>
+    <div class="main-content">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header ">
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                      <div class="search-container position-relative">
+
+                        <form>
+                            
+                            <div class="input-group no-border">
+                              <input type="text" value="" class="form-control" placeholder="Search...">
+                              <div class="input-group-append">
+                                <div class="input-group-text">
+                                  <i class="now-ui-icons ui-1_zoom-bold"></i>
+                                </div>
+                              </div>
+                            
+                            </div>
+                        
+                            <div class="date-range-picker">
+                              <label for="start-date">Start Date</label>
+                              <input type="date" id="start-date" name="start-date" placeholder="Start date">
+                              
+                              <label for="end-date">End Date</label>
+                              <input type="date" id="end-date" name="end-date" placeholder="End date">
+                            </div>
+                            
+                          </form>
+                      </div>
+                  </div>
+              
+          </div>
+          </div>
+    	<div class="title">
+    		<h3></h3>
+    	</div>
+    	<div class="row">
+            <div class="col-md-12">
+                
+            </div>
+            <div class="col-12">
+                <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Object Value</th>
+                            <th>Methode</th>
+                            <th>URI</th>
+                            <th>Reponse Status</th>
+                            <th>Date Insertion</th>
+                            <th>Action</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let api of apiHistory">
+                            <td>{{ api.ID_ACM_TRANSVERS_HISTORY }}</td>
+                            <td>{{ api.OBJECT_VALUE }}</td>
+                            <td>{{ api.METHODE }}</td>
+                            <td>{{ api.URI }}</td>
+                            <td>{{ api.REPONSE_STATUS }}</td>
+                            <td>{{ api.DATE_INSERTION | date:'short' }}</td>
+                            <td>{{ api.DATE_LAST_UPDATE | date:'short' }}</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <button style="border: none; background: transparent; cursor: pointer;" (click)="voirDetails(api)">
+                                  <i class="fa fa-info-circle" style="font-size: 24px; color: rgb(78, 31, 197);"></i>
+                                </button>
+                              </td>
+                          </tr>
+                          
+                    </tbody>
+                </table>
+                </div>
+    
+                
+    </div>
+  </div>
+</div>
+</div></div></div></div>
+</body>

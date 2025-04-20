@@ -1,0 +1,106 @@
+/* Police moderne (Google Fonts à inclure dans le HTML) */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  margin: 0;
+}
+
+/* NAVBAR */
+.main-header {
+  background: linear-gradient(to right, #2d2d7f, #8f8ce2);
+  height: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  max-width: 70px;
+}
+
+#mainMenu li > a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+#mainMenu li > a:hover {
+  color: #ffb74d;
+}
+
+/* FORMULAIRE DE CONNEXION */
+.login-card {
+  margin: 100px auto;
+  max-width: 900px;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.login-card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-card-description {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.form-control:focus {
+  border-color: #2d2d7f;
+  box-shadow: 0 0 0 3px rgba(45, 45, 127, 0.1);
+  outline: none;
+}
+
+.login-btn {
+  background-color: #2d2d7f;
+  color: #fff;
+  border-radius: 30px;
+  padding: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #1d1d5f;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .login-card-img {
+    display: none;
+  }
+
+  .card-body {
+    padding: 30px;
+  }
+}

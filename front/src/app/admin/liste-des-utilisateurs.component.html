@@ -1,0 +1,115 @@
+
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+</head>
+<body>
+
+
+  <div class="panel-header panel-header-sm"></div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                  <div class="search-container position-relative">
+                    <form>
+                      <div class="input-group no-border">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Rechercher par nom..."
+                          [(ngModel)]="searchTerm"
+                          (ngModelChange)="filtrerUtilisateurs()"
+                          name="search"
+                        />
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <i class="now-ui-icons ui-1_zoom-bold"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="title">
+              <h3>Liste des utilisateurs</h3>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12"></div>
+              <button class="btn-ajout-utilisateur" (click)="ouvrirFormulaireAjout()">
+                <i class="material-icons">person_add</i> Ajouter un utilisateur
+              </button>
+  
+              <div class="col-12">
+                <div class="table-container">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="text-center">Id</th>
+                        <th>Nom et Prénom</th>
+                        <th>Adresse E-mail</th>
+                        <th>Poste</th>
+                        <th>Mot de passe</th>
+                        <th>Rôle</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let u of utilisateursFiltres">
+                        <td class="text-center">{{ u.id }}</td>
+                        <td>{{ u.nom_prenom }}</td>
+                        <td>{{ u.email }}</td>
+                        <td>{{ u.poste }}</td>
+                        <td>{{ u.password }}</td>
+                        <td>{{ u.roles }}</td>
+                        <td class="td-actions text-right">
+                          <button
+                            type="button"
+                            rel="tooltip"
+                            class="btn btn-info btn-link btn-just-icon btn-sm"
+                            [routerLink]="['/user-profile']"
+                          >
+                            <i class="material-icons">person</i>
+                          </button>
+                          <button
+                            type="button"
+                            rel="tooltip"
+                            class="btn btn-danger btn-link btn-just-icon btn-sm"
+                            (click)="supprimerUtilisateur(u, i)"
+                          >
+                            <i class="material-icons">close</i>
+                          </button>
+                        </td>
+                      </tr>
+  
+                      <tr *ngIf="utilisateursFiltres.length === 0">
+                        <td colspan="7" class="text-center">Aucun utilisateur trouvé.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+  
+                  <div *ngIf="errorMessage" class="alert alert-danger">
+                    {{ errorMessage }}
+                  </div>
+                  <div *ngIf="isLoading">Chargement...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>

@@ -1,0 +1,151 @@
+
+/* ✅ Page principale */
+.logs-page {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f4f4f4; /* Fond neutre clair */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif; /* Typographie professionnelle */
+  display: flex;
+  flex-direction: column;
+}
+/* ✅ Centrer le titre des catégories de logs */
+.logs-page h2 {
+  text-align: center;
+  font-size: 30px; /* Taille du titre */
+  font-weight: 600; /* Gras pour un titre plus marqué */
+  color: #333; /* Couleur du texte */
+  margin-bottom: 20px; /* Espacement en bas */
+}
+
+
+/* ✅ Bannière */
+.banner {
+  background-color: #009999; /* Turquoise de Talys */
+  color: #fff; /* Texte blanc */
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.banner p {
+  margin-top: 8px;
+  font-size: 16px;
+  opacity: 0.85;
+  text-align: center;
+}
+
+/* ✅ Statistiques */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Assure que l'icône et le texte sont centrés sur la même ligne */
+  gap: 15px; /* Espacement normal entre l'icône et le texte */
+  width: 100%;
+  text-align: left; /* Texte aligné à gauche */
+  justify-content: flex-start; /* Pousse l'icône et le texte à gauche */
+}
+
+.stat-card .icon {
+  font-size: 40px;
+  padding: 15px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Réduire la marge entre l'icône et le texte */
+}
+
+
+
+/* ✅ Log Cards - Deux par ligne */
+.logs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux cartes par ligne */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.log-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Assure que l'icône et le texte sont centrés sur la même ligne */
+  justify-content: flex-start; /* Pousse l'icône et le texte à gauche */
+  gap: 15px; /* Espacement normal entre l'icône et le texte */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: left; /* Texte aligné à gauche */
+}
+
+.big-icon {
+  font-size: 1.8rem; /* Taille de l'icône */
+}
+
+.log-card.success {
+  border-left: 5px solid #28a745; /* Bordure verte pour succès */
+}
+
+.log-card.error {
+  border-left: 5px solid #dc3545; /* Bordure rouge pour erreur */
+}
+
+.log-card.info {
+  border-left: 5px solid #17a2b8; /* Bordure bleue pour info */
+}
+
+.log-card.warning {
+  border-left: 5px solid #ffc107; /* Bordure jaune pour avertissement */
+}
+
+.log-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  text-align: center; 
+}
+
+.log-info p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #777;
+  text-align: center;
+}
+
+/* ✅ Responsive pour petits écrans */
+@media (max-width: 768px) {
+  .logs-grid {
+    grid-template-columns: 1fr; /* Une seule carte par ligne sur petits écrans */
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+

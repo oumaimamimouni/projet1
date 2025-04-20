@@ -1,0 +1,33 @@
+<h2>Ajouter un utilisateur</h2>
+<form [formGroup]="form" (ngSubmit)="ajouter()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nom complet</mat-label>
+    <input matInput formControlName="nom_prenom">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rôle</mat-label>
+    <mat-select formControlName="role">
+      <mat-option value="ADMIN">ADMIN</mat-option>
+      <mat-option value="USER">UTILISATEUR</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Poste</mat-label>
+    <input matInput formControlName="poste">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Ajouter</button>
+  <button mat-button mat-dialog-close>Annuler</button>
+</form> 
